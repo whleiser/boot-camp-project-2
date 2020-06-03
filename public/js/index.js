@@ -1,3 +1,13 @@
+// API
+
+const apiKey = "VyXiMxXtP3oty4G8rjGqLCFpJq5jVDzI";
+const mapQuest = "http://www.mapquestapi.com/geocoding/v1/address?key=" + apiKey + "Y&street=1600+Pennsylvania+Ave+NW&city=Washington&state=DC&postalCode=20500";
+
+
+console.log(mapQuest);
+
+
+
 $(document).ready(() => {
   // Getting references to our form and input
   const userInfo = $("form.userInput");
