@@ -1,8 +1,9 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const axios = require("axios");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
@@ -14,27 +15,28 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/userInput", (req,res) => {
-    req.body(
-      
-    )
- console.log("Post API:" + req.body);
 
+  app.post("/api/userInput", (req, res) => {
+ 
+    const apiKey = "VyXiMxXtP3oty4G8rjGqLCFpJq5jVDzI";
+    const mapQuest = "http://www.mapquestapi.com/geocoding/v1/address?key=" + apiKey + "&street=" + encodeURIComponent(req.body.address) + "&postalCode=" + req.body.zipcode;
+
+
+    console.log(mapQuest);
+
+    axios.get(mapQuest)
+  
+      .then(function (response) {
+        console.log(response.data);
+        res.json(response.data);
+      });
+
+      
   })
 
-  //  // API
-  //  const apiKey = "VyXiMxXtP3oty4G8rjGqLCFpJq5jVDzI";
-  //  const mapQuest = "http://www.mapquestapi.com/geocoding/v1/address?key=" + apiKey + "&street=" + encodeURIComponent(userData.address) + "&postalCode=" + userData.zipcode;
-   
-   
-  //  console.log(mapQuest);
-   
-  //  fetch(mapQuest)
-  //    .then(response => response.json())
-  //    .then(function (response) {
-  //      console.log(response);
-  //    });
- 
+  // API
+
+
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
@@ -51,7 +53,7 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
 
-      
+
   });
 
   // Route for logging user out

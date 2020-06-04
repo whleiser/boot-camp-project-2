@@ -37,8 +37,9 @@ $(document).ready(() => {
       address: address,
       zipcode: zipcode
     })
-    .then(() => {
-      window.location.replace("/restaurant_list");
+    .then((response) => {
+      console.log(response);
+      // window.location.replace("/restaurant_list");
       // If there's an error, handle it by throwing up a bootstrap alert
     })
     .catch(handleLoginErr);
