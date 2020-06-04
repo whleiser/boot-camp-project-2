@@ -14,6 +14,28 @@ module.exports = function(app) {
     });
   });
 
+  app.post("/api/userInput", (req,res) => {
+    req.body(
+      
+    )
+ console.log("Post API:" + req.body);
+
+  })
+
+  //  // API
+  //  const apiKey = "VyXiMxXtP3oty4G8rjGqLCFpJq5jVDzI";
+  //  const mapQuest = "http://www.mapquestapi.com/geocoding/v1/address?key=" + apiKey + "&street=" + encodeURIComponent(userData.address) + "&postalCode=" + userData.zipcode;
+   
+   
+  //  console.log(mapQuest);
+   
+  //  fetch(mapQuest)
+  //    .then(response => response.json())
+  //    .then(function (response) {
+  //      console.log(response);
+  //    });
+ 
+
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
@@ -28,6 +50,8 @@ module.exports = function(app) {
       .catch(err => {
         res.status(401).json(err);
       });
+
+      
   });
 
   // Route for logging user out
