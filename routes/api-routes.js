@@ -2,6 +2,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const geolib = require('geolib');
+const axios = require("axios");
 
 module.exports = function(app) {
     // Using the passport.authenticate middleware with our local strategy.
@@ -16,7 +17,23 @@ module.exports = function(app) {
     // });
 
 
+    app.post("/api/userInput", (req, res) => {
 
+        const apiKey = "VyXiMxXtP3oty4G8rjGqLCFpJq5jVDzI";
+        const mapQuest = "http://www.mapquestapi.com/geocoding/v1/address?key=" + apiKey + "&street=" + encodeURIComponent(req.body.address) + "&postalCode=" + req.body.zipcode;
+
+
+        console.log(mapQuest);
+
+        axios.get(mapQuest)
+
+        .then(function(response) {
+            console.log(response.data);
+            res.json(response.data);
+        });
+
+
+    })
     app.get("/api/results", function(req, res) {
         //current numbers are placeholders for external inputs from Mapquest API
         var userLat = 32.854961;
