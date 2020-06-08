@@ -4,21 +4,21 @@ $(document).ready(() => {
     var restaurants;
 
     //Needs changes
-    function getRestaurants(category) {
-        var categoryString = category || "";
-        if (categoryString) {
-            categoryString = "/category/" + categoryString;
+    // function getRestaurants(category) {
+    //     var categoryString = category || "";
+    //     if (categoryString) {
+    //         categoryString = "/category/" + categoryString;
+    //     }
+    $.get("/api/results", function(data) {
+        console.log("Results", data);
+        restaurants = data;
+        if (!restaurants || !restaurants.length) {
+            displayEmpty();
+        } else {
+            initializeResults();
         }
-        $.get("/api/results", function(data) {
-            console.log("Results", data);
-            restaurants = data;
-            if (!restaurants || !restaurants.length) {
-                displayEmpty();
-            } else {
-                initializeResults();
-            }
-        });
-    }
+    });
+
     // Getting the initial list of restaurants
     getRestaurants();
 
