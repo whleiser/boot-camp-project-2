@@ -1,0 +1,86 @@
+/* BODY */
+* {
+    font-family: "Tahoma";
+}
+
+
+.grid {
+display: grid;
+height: auto;
+grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+grid-template-rows: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px ;
+"title      title"
+"header    header"
+"sidebar  content"
+"footer    footer"
+;
+}
+/* TITLE */
+.title{
+    grid-area: title;
+    grid-column-start: 1;
+      grid-column-end: 40;
+      grid-row-start:1;
+      grid-row-end: 2;
+      color: white;
+      background-color: #f8f9fa;
+      text-align: center;
+     
+    
+    }
+/* CARD */
+    .one{
+        grid-area: content;
+        grid-column-start: 3;
+        grid-column-end: 9;
+        grid-row-start:4;
+        grid-row-end: 5;
+     
+    }
+    
+    .two{
+        grid-area: sidebar;
+        grid-column-start: 10;
+        grid-column-end: 16;
+        grid-row-start:4;
+        grid-row-end: 5;
+        
+        }   
+        
+    .three {
+        grid-area: sidebar;
+        grid-column-start: 17;
+        grid-column-end: 23;
+        grid-row-start:4;
+        grid-row-end: 5;
+    }
+
+    .four {
+        grid-area: sidebar;
+        grid-column-start: 24;
+        grid-column-end: 30;
+        grid-row-start:4;
+        grid-row-end: 5;
+    }
+
+    .five {
+        grid-area: sidebar;
+        grid-column-start: 31;
+        grid-column-end: 37;
+        grid-row-start:4;
+        grid-row-end: 5;
+    }
+/* FOOTER */
+    .footer{
+      grid-area: footer;
+      grid-column-start: 1;
+      grid-column-end: 40;
+      grid-row-start: 17;
+      grid-row-end: 19;
+      background-color: black;
+      color: white;
+      text-align: center;
+      bottom: 0;
+      padding-top: 20px;
+      
+    }
