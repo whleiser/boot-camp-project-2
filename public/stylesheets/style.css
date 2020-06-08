@@ -2,3 +2,81 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+/* Restaurant List CSS */
+* {
+  margin: 0;
+  padding:0;
+}
+​
+body {
+  background-color: gray;
+}
+​
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+​
+.title {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  text-align: center;
+
+}
+​
+#search {
+
+}
+​
+.header {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+​
+.sidebar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+​
+.McDonald {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding-top: 50px;
+}
+​
+.Wingstop {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  padding-top: 50px;
+}
+​
+.Chickfila {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  padding-top: 50px;
+}
+​
+.Chickfils {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  padding-top: 50px;
+}
+​
+.Chickfild {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  padding-top: 50px;
+}
+​
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8%;
+}
