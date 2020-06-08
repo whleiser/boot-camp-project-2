@@ -18,8 +18,9 @@ module.exports = function (app) {
 
   app.post("/api/userInput", (req, res) => {
  
-    const apiKey = "VyXiMxXtP3oty4G8rjGqLCFpJq5jVDzI";
-    const mapQuest = "http://www.mapquestapi.com/geocoding/v1/address?key=" + apiKey + "&street=" + encodeURIComponent(req.body.address) + "&postalCode=" + req.body.zipcode;
+    // const apiKey = "VyXiMxXtP3oty4G8rjGqLCFpJq5jVDzI";  
+    
+    const mapQuest = "http://www.mapquestapi.com/geocoding/v1/address?key=" + process.env.MAPQUEST_API_KEY + "&street=" + encodeURIComponent(req.body.address) + "&postalCode=" + req.body.zipcode;
 
 
     console.log(mapQuest);
