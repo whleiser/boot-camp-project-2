@@ -57,6 +57,8 @@ $(document).ready(() => {
     })
     .then((response) => {
       console.log(response);
+      localStorage.locationData = JSON.stringify(response);
+      
       window.location.replace("/restaurant_list.html");
       // If there's an error, handle it by throwing up a bootstrap alert
     })
