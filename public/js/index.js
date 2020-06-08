@@ -35,12 +35,12 @@ $(document).ready(() => {
   //     console.log(first.streetNumber + ' '+ first.street);
   // });
   
+  userInputUser(userData.address, userData.zipcode);
+    addressInput.val("");
+    zipcodeInput.val("");
     
   });
     
-    userInputUser(userData.address, userData.zipcode);
-      addressInput.val("");
-      zipcodeInput.val("");
     
     
     // If we have an address and zipcode, run the userInputUser function
