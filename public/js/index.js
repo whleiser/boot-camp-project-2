@@ -57,7 +57,7 @@ $(document).ready(() => {
     })
     .then((response) => {
       console.log(response);
-      // window.location.replace("/restaurant_list");
+      window.location.replace("/restaurant_list.html");
       // If there's an error, handle it by throwing up a bootstrap alert
     })
     
