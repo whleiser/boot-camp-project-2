@@ -31,7 +31,7 @@ $(document).ready(() => {
 
     // This function constructs a post's HTML
     function createResults(restaurant) {
-        var newPostCard = $("<div>");
+        var newPostCard = $("<div class = 'my-5'>");
         newPostCard.addClass("card");
         var newPostCardHeading = $("<div>");
         newPostCardHeading.addClass("card-header");
