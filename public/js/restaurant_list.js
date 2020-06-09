@@ -20,7 +20,6 @@ $(document).ready(() => {
     });
 
     // Getting the initial list of restaurants
-    getRestaurants();
 
     function initializeResults() {
         resultsContainer.empty();
