@@ -6,8 +6,8 @@ $(document).ready(() => {
     const locationData = JSON.parse(localStorage.locationData).results[0].locations[0].displayLatLng;
     console.log(locationData);
 
-    $.post("/api/results", locationData).then(function (data) {
-         restaurants = data;
+    $.post("/api/results", locationData).then(function(data) {
+        restaurants = data;
         if (!restaurants || !restaurants.length) {
             displayEmpty();
         } else {
@@ -17,7 +17,7 @@ $(document).ready(() => {
 
 
 
- // Getting the initial list of restaurants
+    // Getting the initial list of restaurants
 
 
     function initializeResults() {
@@ -31,7 +31,7 @@ $(document).ready(() => {
 
     // This function constructs a post's HTML
     function createResults(restaurant) {
-        var newPostCard = $("<div>");
+        var newPostCard = $("<div class = 'my-5'>");
         newPostCard.addClass("card");
         var newPostCardHeading = $("<div>");
         newPostCardHeading.addClass("card-header");

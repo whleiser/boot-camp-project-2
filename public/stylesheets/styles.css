@@ -1,0 +1,72 @@
+* {
+    font-family: "Tahoma";
+}
+
+.grid {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 125px 125px 125px 125px 125px 125px 125px 125px 125px;
+    /* "title      title" "header    header" "sidebar  content" "footer    footer"; */
+}
+
+.title {
+    grid-area: title;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.header {
+    grid-area: header;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.btn {
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.content {
+    grid-area: content;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 9;
+    background-image: url(https://media-cdn.grubhub.com/image/upload/c_scale,w_1650/q_50,dpr_auto,f_auto,fl_lossy,c_crop,e_vibrance:20,g_center,h_900,w_800/v1534256595/Onboarding/Burger.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    grid-area: footer;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    background-color: black;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    padding-top: 50px;
+}
