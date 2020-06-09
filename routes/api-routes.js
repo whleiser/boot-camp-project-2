@@ -67,7 +67,7 @@ module.exports = function(app) {
 
         var userLat = req.body.lat;
         var userLong = req.body.lng;
-        var userDistance = 5;
+        var userDistance = 1;
 
         //converts user distance miles to meters for geolib
         var convertedDistance = (userDistance * 1609.34);
