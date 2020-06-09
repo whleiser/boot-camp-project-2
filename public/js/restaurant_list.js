@@ -1,4 +1,4 @@
-// $(document).ready(() => {
+$(document).ready(() => {
     const locationData = JSON.parse(localStorage.locationData).results[0].locations[0].displayLatLng;
     console.log(locationData);
 
@@ -6,7 +6,7 @@
      
         console.log(data);
     });
-// });
+});
 
 
 
