@@ -4,7 +4,7 @@
 
 ## How it works
 
-After the user inputs their location information GrubHunt is able to find nearby restaurants within your area by converting the given address into geospatial operations. It then compares the locations to our restaurant database and outputs the restaurants within a 5 mile radius. It's quick and easy to use!
+After the user inputs their location information GrubHunt is able to find nearby restaurants within your area by converting the given address into geospatial operations. It then compares the locations to our Dallas restaurant database and outputs the restaurants within a 1 mile radius of your area. It's quick and easy to use!
 
 
 ## Built With
@@ -18,8 +18,8 @@ After the user inputs their location information GrubHunt is able to find nearby
 
 ## Contributors
 
-whleiser
-RomJosh99
-AminaTheUnicorn
+* whleiser
+* RomJosh99
+* AminaTheUnicorn
 
 
