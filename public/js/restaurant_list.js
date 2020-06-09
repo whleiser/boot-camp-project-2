@@ -3,14 +3,10 @@ $(document).ready(() => {
     var resultsContainer = $(".results-container");
     var restaurants;
 
-    //Needs changes
-    // function getRestaurants(category) {
-    //     var categoryString = category || "";
-    //     if (categoryString) {
-    //         categoryString = "/category/" + categoryString;
-    //     }
-    $.get("/api/results", function(data) {
-        console.log("Results", data);
+    const locationData = JSON.parse(localStorage.locationData).results[0].locations[0].displayLatLng;
+    console.log(locationData);
+
+    $.post("/api/results", locationData).then(function(data) {
         restaurants = data;
         if (!restaurants || !restaurants.length) {
             displayEmpty();
@@ -19,7 +15,10 @@ $(document).ready(() => {
         }
     });
 
+
+
     // Getting the initial list of restaurants
+
 
     function initializeResults() {
         resultsContainer.empty();
@@ -27,7 +26,7 @@ $(document).ready(() => {
         for (var i = 0; i < restaurants.length; i++) {
             restaurantsToAdd.push(createResults(restaurants[i]));
         }
-        resultsContainer.append(postsToAdd);
+        resultsContainer.append(restaurantsToAdd);
     }
 
     // This function constructs a post's HTML
