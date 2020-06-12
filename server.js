@@ -4,13 +4,8 @@ const session = require("express-session");
 require("dotenv").config();
 // Requiring passport as we've configured it
 // const passport = require("./config/passport");
-
+const PORT = process.env.PORT || 8080;
 // Setting up port and requiring models for syncing
-if (PORT !== 8080) {
-    app.use(express.static("dist"));
-} else {
-    app.use(express.static("public"));
-}
 const db = require("./models");
 
 // Creating express app and configuring middleware needed for authentication
@@ -22,6 +17,11 @@ app.use(express.json());
 app.use(
     session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
 );
+if (PORT !== 8080) {
+    app.use(express.static("dist"));
+} else {
+    app.use(express.static("public"));
+}
 // app.use(passport.initialize());
 // app.use(passport.session());
 
