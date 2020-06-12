@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>GrubHunt</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="grid">
+        <img src="https://media-cdn.grubhub.com/image/upload/c_scale,w_1650/q_50,dpr_auto,f_auto,fl_lossy,c_crop,e_vibrance:20,g_center,h_900,w_800/v1534256595/Onboarding/Burger.jpg">
+
+        <div class="title">GrubHunt</div>
+
+        <div class="sidebar">
+            <!-- Image and text -->
+            <nav class="navbar">
+                <a class="navbar-brand">
+                    <img src="https://cdn3.iconfinder.com/data/icons/map/500/restaurant-512.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> GrubHunt
+                </a>
+            </nav>
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+                <!-- FORM -->
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                        </div>
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <h2>Find food in the Dallas area</h2>
+                            <form class="userInput">
+                                <div class="form-group">
+                                    <label for="exampleInputAddress1"></label>
+                                    <input type="Address" class="address form-control" id="Address-input" placeholder="Enter address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputZipcode1"></label>
+                                    <input type="Zipcode" class="zipCode form-control" id="Zipcode-input" placeholder="Enter zip code">
+                                </div>
+                                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only">Error:</span> <span class="msg">Invalid address or zip code</span>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Find food</button>
+                            </form>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content"></div>
+                <div class="footer">
+                    About GrubHunt
+                    <p>After the user inputs their location information GrubHunt is able to find nearby restaurants within your area by converting the given address into geospatial operations. It then compares the locations to our restaurant database and
+                        outputs the restaurants within a mile radius. It's quick and easy to use!</p>
+
+                </div>
+            </div>
+
+            <!-- CSS -->
+            <link rel="stylesheet" href="./stylesheets/styles.css">
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <script type="text/javascript" src="./js/index.js"></script>
+</body>
+
+</html>
